@@ -1,0 +1,119 @@
+.range-filter {
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.range-filter__controls {
+  position: relative;
+}
+
+.range-filter__scale {
+  height: 2px;
+  margin-bottom: 36px;
+  background-color: $light-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.range-filter__bar {
+  width: 90%;
+  height: 4px;
+  background-color: $primary-lighter;
+}
+
+.range-filter__toggle {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 2px solid$primary-lighter;
+  background-color: $base-white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity-1;
+    outline: $base-white solid 2px;
+    outline-offset: -4px;
+  }
+
+  &:active {
+    background-color: $base-primary;
+    outline: $base-white solid 2px;
+    outline-offset: -4px;
+  }
+}
+
+.range-filter--disabled .range-filter__toggle {
+  border: 2px solid $base-grey;
+  background-color: $base-white;
+}
+
+.range-filter--disabled .range-filter__bar {
+  background-color: $base-grey;
+}
+
+.range-filter__price-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-filter__price-controls::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background-color: $base-grey;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.range-filter__price-controls-input {
+  width: 118px;
+  padding: 6px 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $base-black;
+  background-color: $base-white;
+  border: 2px solid$primary-lighter;
+  border-radius: 4px;
+
+  &[value="0"] {
+    color: $base-grey;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    border: 2px solid$light-grey;
+    color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}

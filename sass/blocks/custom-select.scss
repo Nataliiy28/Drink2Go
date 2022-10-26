@@ -1,0 +1,84 @@
+.custom-select {
+  position: relative;
+  right: 0;
+  width: 159px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+
+  @media (min-width: $desktop-width) {
+    right: 15px;
+  }
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: $lightest-grey;
+  color: $base-primary;
+  font-weight: 600;
+  text-align: end;
+  width: 160px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.select-selected::after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: -5px;
+  width: 10px;
+  height: 6px;
+  background-image: url("");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.select-selected.select-arrow-active::after {
+  background-image: url("");
+  background-size: auto;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+.select-items,
+.select-selected {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.select-items div:not(:last-child) {
+  border: 1px solid transparent;
+  border-color: transparent transparent $base-secondary transparent;
+}
+
+.select-items {
+  position: absolute;
+  background-color: $base-white;
+  top: 100%;
+  left: -16px;
+  right: -8px;
+  z-index: 99;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 10px 10px $base-black;
+  color: $base-black;
+  overflow: hidden;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover:not(.same-as-selected) {
+  background-color: $base-secondary;
+}
+
+.same-as-selected {
+  background-color: $base-primary;
+  color: $base-white;
+}

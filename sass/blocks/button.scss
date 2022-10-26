@@ -1,0 +1,22 @@
+.button {
+  padding: 8px 20px;
+  color: $base-white;
+  background-color: $base-primary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: default;
+  }
+}

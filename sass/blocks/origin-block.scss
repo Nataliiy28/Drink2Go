@@ -1,0 +1,52 @@
+.origin-block {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 29px;
+  }
+}
+
+.origin-block-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.origin-block-item {
+  margin-bottom: 20px;
+  padding-left: 54px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 53px;
+  }
+}
+
+.origin-block-name {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.origin-block-checkbox + .origin-block-name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -52px;
+  width: 42px;
+  height: 24px;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
